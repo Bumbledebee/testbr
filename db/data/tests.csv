@@ -1,5 +1,5 @@
 name,criteria,topic_id
-App Startup,App must start up successfully,1
+Topic.create([{name: "App Startup" , criteria: "App must start up successfully",topic_id:1}])
 App ID,App ID in build must match App ID from Plan,1
 App Version,App Version should be gathered for future reference,1
 SDK Version,SDK Version must be the latest available,1
