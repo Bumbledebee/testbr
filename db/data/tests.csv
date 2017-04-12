@@ -1,0 +1,55 @@
+name,criteria,topic_id
+App Startup,App must start up successfully,1
+App ID,App ID in build must match App ID from Plan,1
+App Version,App Version should be gathered for future reference,1
+SDK Version,SDK Version must be the latest available,1
+Device Identifiers,GAID or IDFA must be sent in all traffic,1
+User IDs,User ID must be unique per user,1
+Adapter Startup,Network Adapter must start up successfully,2
+Adapter Version,Network Adapter version must be the latest available,2
+Integrated,The Offer Wall must be integrated into the app,3
+Screenshots,The screenshots of the Offer Wall integration must be up to date,3
+Load,The Offer Wall must load correctly,3
+Fill,The Offer Wall must provide at least one offer,3
+Close,The Offer Wall must close correctly,3
+Returning to App,When using VCS, the Offer Wall must close when returning to the app,3
+Completed,When completed- the offer must reward,3
+Not Completed,When not completed- the offer must not reward,3
+Rewarding,Rewards must be credited in an obvious manner,3
+Integrated,Rewarded Video must be integrated into the app,4
+Screenshots,The screenshots of the Rewarded Video integration must be up to date,4
+Pre-caching Enabled,Pre-caching must be enabled on the build,4
+First Request,The first video request should be at least 10 seconds after app start,4
+Fill,App reacts correctly when provided with a fill,4
+No-Fill,App reacts correctly when not provided with a fill,4
+Button,When using a button to start the video, it must not be active before the video request is complete,4
+Cookies,Cookies must be sent by the app with the video requests,4
+Rewarding,Rewards must be credited in an obvious manner,4
+Fill,The network must provide a fill,5
+Play,The network's video must play completely and correctly,5
+Completed Video,When completed- the video must reward,5
+Aborted Video,When aborted- the video must not reward,5
+Followed End Card,After following the end card and returning to the app, the video must reward,5
+Fill,The network must provide a fill,6
+Play,The network's video must play completely and correctly,6
+Completed Video,When completed- the video must reward,6
+Aborted Video,When aborted- the video must not reward,6
+Followed End Card,After following the end card and returning to the app, the video must reward,6
+Integrated,Interstitials must be integrated into the app,7
+Screenshots,The screenshots of the Interstitials integration must be up to date,7
+First Request,The first video request should be at least 10 seconds after app start,7
+Fill,App reacts correctly when provided with a fill,7
+No-Fill,App reacts correctly when not provided with a fill,7
+Cookies,Cookies must be sent by the app with the interstitial requests,7
+Fill,The network must provide a fill,8
+Show,The network's interstitial must show correctly,8
+Close,The network's interstitial must close correctly,8
+Fill,The network must provide a fill,9
+Show,The network's interstitial must show correctly,9
+Close,The network's interstitial must close correctly,9
+Request,The VCS request must be made correctly,10
+Response,The VCS response must return with valid data,10
+Reporting Available,The network must have a reporting API integrated in our system,11
+Configured,The reporting credentials must be configured in the dashboard,11
+Successful,The reporting API must return without any error messages,11
+Data Returned,The reporting API should provide data,11
