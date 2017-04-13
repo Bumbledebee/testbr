@@ -9,7 +9,7 @@ module Seeders
           test.criteria = row['criteria']
           test.topic_id = row['topic_id']
           test.save!
-          puts "#{test.name}, #{t.criteria} saved"
+          puts "#{test.name}, #{t.criteriabin} saved"
         end
       end
     end
