@@ -10,10 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170412134027) do
+ActiveRecord::Schema.define(version: 20170418103610) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "application_tests", force: :cascade do |t|
+    t.integer  "application_id"
+    t.integer  "test_id"
+    t.integer  "test_value_id"
+    t.integer  "test_status_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "applications", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "fyberapplicationid"
+    t.integer  "fyberpublisherid"
+    t.integer  "platform_id"
+    t.string   "dashboardlink"
+    t.string   "buildlink"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "networks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "platform_id"
+    t.boolean  "rv"
+    t.boolean  "interstitial"
+    t.boolean  "banner"
+    t.boolean  "active"
+    t.text     "comment"
+    t.string   "latest_version"
+    t.string   "versions"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.boolean  "fyber"
+  end
+
+  create_table "platforms", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "result_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "test_statuses", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tests", force: :cascade do |t|
     t.string   "name"

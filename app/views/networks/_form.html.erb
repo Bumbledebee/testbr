@@ -1,0 +1,62 @@
+<%= form_for(network) do |f| %>
+  <% if network.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(network.errors.count, "error") %> prohibited this network from being saved:</h2>
+
+      <ul>
+      <% network.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :platform_id %>
+    <%= f.number_field :platform_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rv %>
+    <%= f.check_box :rv %>
+  </div>
+
+  <div class="field">
+    <%= f.label :interstitial %>
+    <%= f.check_box :interstitial %>
+  </div>
+
+  <div class="field">
+    <%= f.label :banner %>
+    <%= f.check_box :banner %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %>
+    <%= f.check_box :active %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_area :comment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :latest_version %>
+    <%= f.text_field :latest_version %>
+  </div>
+
+  <div class="field">
+    <%= f.label :versions %>
+    <%= f.text_field :versions %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

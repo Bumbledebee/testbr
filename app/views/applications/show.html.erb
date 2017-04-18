@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @application.name %>
+</p>
+
+<p>
+  <strong>Fyberapplicationid:</strong>
+  <%= @application.fyberapplicationid %>
+</p>
+
+<p>
+  <strong>Fyberpublisherid:</strong>
+  <%= @application.fyberpublisherid %>
+</p>
+
+<p>
+  <strong>Platform:</strong>
+  <%= @application.platform_id %>
+</p>
+
+<p>
+  <strong>Dashboardlink:</strong>
+  <%= @application.dashboardlink %>
+</p>
+
+<p>
+  <strong>Buildlink:</strong>
+  <%= @application.buildlink %>
+</p>
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

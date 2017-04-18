@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Networks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Platform</th>
+      <th>Rv</th>
+      <th>Interstitial</th>
+      <th>Banner</th>
+      <th>Active</th>
+      <th>Comment</th>
+      <th>Latest version</th>
+      <th>Versions</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @networks.each do |network| %>
+      <tr>
+        <td><%= network.name %></td>
+        <td><%= network.platform_id %></td>
+        <td><%= network.rv %></td>
+        <td><%= network.interstitial %></td>
+        <td><%= network.banner %></td>
+        <td><%= network.active %></td>
+        <td><%= network.comment %></td>
+        <td><%= network.latest_version %></td>
+        <td><%= network.versions %></td>
+        <td><%= link_to 'Show', network %></td>
+        <td><%= link_to 'Edit', edit_network_path(network) %></td>
+        <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Network', new_network_path %>

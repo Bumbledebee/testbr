@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @network.name %>
+</p>
+
+<p>
+  <strong>Platform:</strong>
+  <%= @network.platform_id %>
+</p>
+
+<p>
+  <strong>Rv:</strong>
+  <%= @network.rv %>
+</p>
+
+<p>
+  <strong>Interstitial:</strong>
+  <%= @network.interstitial %>
+</p>
+
+<p>
+  <strong>Banner:</strong>
+  <%= @network.banner %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @network.active %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @network.comment %>
+</p>
+
+<p>
+  <strong>Latest version:</strong>
+  <%= @network.latest_version %>
+</p>
+
+<p>
+  <strong>Versions:</strong>
+  <%= @network.versions %>
+</p>
+
+<%= link_to 'Edit', edit_network_path(@network) %> |
+<%= link_to 'Back', networks_path %>

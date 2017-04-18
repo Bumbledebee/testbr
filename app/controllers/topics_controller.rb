@@ -5,6 +5,10 @@ class TopicsController < ApplicationController
   # GET /topics.json
   def index
     @topics = Topic.all
+    @tests
+    @networks
+    @applications
+    @platforms
   end
 
   # GET /topics/1

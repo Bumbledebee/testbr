@@ -1,0 +1,57 @@
+
+<table>
+  <thead>
+    <% @topics.each do |topic| %>
+      <tr>
+        <th><%= topic.name %></th>
+        <th colspan="3"></th>
+      </tr>
+    <% end %>
+  </thead>
+
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= topic.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= form_for(application_test) do |f| %>
+  <% if application_test.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(application_test.errors.count, "error") %> prohibited this application_test from being saved:</h2>
+
+      <ul>
+      <% application_test.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :application_id %>
+    <%= f.number_field :application_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :test_id %>
+    <%= f.number_field :test_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :test_value_id %>
+    <%= f.number_field :test_value_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :test_status_id %>
+    <%= f.number_field :test_status_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
